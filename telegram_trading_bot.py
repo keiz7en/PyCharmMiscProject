@@ -59,6 +59,15 @@ PRIORITY_SYMBOLS = [
 # User activity tracking
 USER_ACTIVITY = defaultdict(lambda: {'last_active': datetime.now(), 'preferences': {}})
 
+# Daily signal tracking and quotas
+MIN_DAILY_SIGNALS = 8  # Minimum signals to guarantee per day
+DAILY_SIGNAL_TARGET = 15  # Target signals per day
+DAILY_SIGNALS = {
+    'date': datetime.now().date(),
+    'signals_sent': [],
+    'count': 0
+}
+
 # Logging setup
 logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
