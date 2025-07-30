@@ -178,31 +178,36 @@ joblib==1.3.1
 └── README.md                 # This documentation
 ```
 
-## 🚀 **GETTING STARTED**
+## 🚀 **DEPLOYMENT GUIDE**
 
-### 1️⃣ **Installation**
+### Requirements
 
+- Python 3.11+
+- Telegram Bot Token
+- Internet connection for Binance API
+
+### Render Deployment
+
+1. Fork this repository
+2. Connect to Render
+3. Create new Web Service
+4. Use these settings:
+   - **Build Command**: `pip install -r requirements.txt`
+   - **Start Command**: `python telegram_trading_bot.py`
+   - **Python Version**: 3.11.9
+
+### Environment Variables
+
+Set your Telegram Bot Token in the code or as environment variable:
+```
+BOT_TOKEN=your_telegram_bot_token_here
+```
+
+### Local Development
 ```bash
 pip install -r requirements.txt
-```
-
-### 2️⃣ **Configuration**
-
-- Update `BOT_TOKEN` in `telegram_trading_bot.py`
-- Get your chat ID using `get_chat_id.py`
-
-### 3️⃣ **Run Bot**
-
-```bash
 python telegram_trading_bot.py
 ```
-
-### 4️⃣ **Start Trading**
-
-- Send `/start` to your bot
-- Configure your preferences
-- Get personalized signals with `/signals`
-- Enable auto signals for hands-free operation
 
 ## 🏆 **COMPETITIVE ADVANTAGES**
 
